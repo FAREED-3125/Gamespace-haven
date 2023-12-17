@@ -30,7 +30,7 @@ const MenuItems = ({
           if (innerwidth <= 740) setisFullMenu(false);
         }}
       >
-        <img src={image} alt="" className="w-[25px] h-[30px] md:w-[20px] " />
+        <img src={image} alt="" className="w-[22px] h-[25px] md:w-[20px] " />
 
         {isfullMenu && (
           <m.div
@@ -58,7 +58,7 @@ const MenuItems = ({
         )}
         <p
           className={
-            "whitespace-nowrap text-[12px] md:text-[13px] text-gray-400 block md:hidden"
+            "whitespace-nowrap text-[10px] md:text-[13px] text-gray-400 block md:hidden"
           }
         >
           {title}

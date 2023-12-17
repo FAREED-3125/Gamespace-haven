@@ -43,9 +43,9 @@ const Sidebar = () => {
     },
   ];
   return (
-    <m.div className="w-max fixed z-[999] left-0 inset-y-0 md:static  rounded-lg bg-lightBlue flex  h-full overflow-hidden">
+    <m.div className="w-max fixed z-[999] left-0 inset-y-0 md:static  rounded-lg bg-lightBlue flex  h-full overflow-auto">
       <m.div
-        className="w-[0px]  overflow-hidden flex flex-col justify-between py-5"
+        className="w-[0px]  flex flex-col justify-between py-5 overflow-auto"
         animate={{
           width: isfullMenu ? "250px" : screenWidth <= 740 ? "0px" : "60px",
         }}
