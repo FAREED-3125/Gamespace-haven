@@ -1,26 +1,48 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
-
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+import React from "react";
+import img from "./Assets/icon _developer mode_.svg";
+import { RouterProvider, createBrowserRouter } from "react-router-dom";
+import Home from "./Components/Home";
+import AllGames from "./Components/AllGames";
+import Platforms from "./Components/Platforms";
+import Strore from "./Components/Strore";
+import Developers from "./Components/Developers";
+import Publisher from "./Components/Publisher";
+import GameDetails from "./Components/Details Components/GameDetails";
+const App = () => {
+  const Router = createBrowserRouter([
+    {
+      path: "/",
+      element: <Home />,
+      children: [
+        {
+          path: "/",
+          index: true,
+          element: <AllGames />,
+        },
+        {
+          path: "/platforms",
+          element: <Platforms />,
+        },
+        {
+          path: "/stores",
+          element: <Strore />,
+        },
+        {
+          path: "/developers",
+          element: <Developers />,
+        },
+        {
+          path: "/publisher",
+          element: <Publisher />,
+        },
+      ],
+    },
+    {
+      path: "/gamedetails/:id",
+      element: <GameDetails />,
+    },
+  ]);
+  return <RouterProvider router={Router}></RouterProvider>;
+};
 
 export default App;
