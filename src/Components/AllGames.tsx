@@ -52,7 +52,7 @@ const AllGames = () => {
           <h3 className="text-[22px] font-[600] mt-10 mb-4 px-2">
             Popular Games
           </h3>
-          <div className="px-2 mt-5 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-3 gap-y-5  ">
+          <div className="px-2 mt-5 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-3 gap-y-6  ">
             {gameData?.results?.map((items: any, index: number) => (
               <div
                 onClick={() =>

@@ -40,7 +40,7 @@ const Publisher = () => {
           }}
           className=" w-full h-full"
         >
-          <div className="px-2 mt-5 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-3 gap-y-5  ">
+          <div className="px-2 mt-5 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-3 gap-y-6  ">
             {gameData?.results?.map((items: any, index: number) => (
               <m.div
                 initial={{
