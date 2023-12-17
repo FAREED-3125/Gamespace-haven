@@ -45,7 +45,7 @@ const Sidebar = () => {
   return (
     <m.div className="w-max fixed z-[999] left-0 inset-y-0 md:static  rounded-lg bg-lightBlue flex  h-full overflow-hidden">
       <m.div
-        className="w-[250px]  overflow-hidden flex flex-col justify-between py-5"
+        className="w-[0px]  overflow-hidden flex flex-col justify-between py-5"
         animate={{
           width: isfullMenu ? "250px" : screenWidth <= 740 ? "0px" : "60px",
         }}
@@ -102,10 +102,22 @@ const Sidebar = () => {
       </m.div>
 
       <div
-        className="w-[20px] h-full flex items-center justify-center border-l-2 border-darkBlue"
+        className="w-[20px] h-full  items-center justify-center border-l-2 border-darkBlue hidden md:flex"
         onClick={() => setisFullMenu((ps) => !ps)}
       >
         <div className="w-[5px] h-[30px] rounded-full bg-white cursor-pointer"></div>
+      </div>
+      <div className="md:hidden flex fixed bottom-0 bg-black/80 backdrop-blur-[2px] w-full items-center justify-around">
+        {Menus.map((items, index) => (
+          <MenuItems
+            title={items.title}
+            index={index}
+            isfullMenu={isfullMenu}
+            image={items.icons}
+            route={items.route}
+            setisFullMenu={setisFullMenu}
+          />
+        ))}{" "}
       </div>
     </m.div>
   );

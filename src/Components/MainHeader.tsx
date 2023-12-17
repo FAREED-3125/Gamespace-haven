@@ -5,6 +5,7 @@ import { CiHeart } from "react-icons/ci";
 import { FaAngleDown } from "react-icons/fa";
 import man from "../Assets/man.png";
 import { useLocation } from "react-router-dom";
+import logo from "../Assets/logo.svg";
 const MainHeader = () => {
   const location = useLocation();
   const [title, setTitle] = useState<string>();
@@ -17,8 +18,10 @@ const MainHeader = () => {
   const genres = ["shooter", "action", "multiplayer", "Adventure"];
   return (
     <div className="w-full  px-2 flex flex-col gap-3 pt-[20px] md:pt-0">
-      <div className=" w-full h-[60px] items-center flex justify-between">
-        <div className="h-[75%] relative w-[80%] md:w-[300px] ">
+      <div className=" w-full h-[60px] items-center flex gap-8 lg:gap-0 justify-between">
+        <img src={logo} alt="" className="w-[40px]  md:hidden" />
+
+        <div className="h-[75%] relative hidden md:block md:w-[300px] ">
           <input
             type="text"
             className="w-full  md:w-[300px] h-full rounded-full  bg-lightBlue px-5 outline-none"
@@ -40,7 +43,7 @@ const MainHeader = () => {
             <CiHeart strokeWidth={".02rem"} />
           </div>
         </div>
-        <div className="overflow-hidden md:mx-5 flex gap-1 items-center rounded-full pr-2 bg-lightBlue h-[75%] ml-1 ">
+        <div className="overflow-hidden md:mx-5 flex gap-1 items-center rounded-full pr-2 bg-lightBlue h-[75%]  ">
           <img
             src={man}
             className=" w-[40px] aspect-square object-cover rounded-full "
@@ -53,11 +56,11 @@ const MainHeader = () => {
           {title}
         </h3>
         {location.pathname === "/" && (
-          <div className=" w-full md:w-max h-[50px] flex items-center gap-2 overflow-auto">
+          <div className=" w-full md:w-max h-[50px] flex items-center gap-3 overflow-auto">
             {genres.map((items, index) => (
               <div
                 key={index}
-                className="h-[70%] px-2 rounded-md flex items-center justify-center shrink-0 bg-darkBlue text-[13px]"
+                className="h-[70%] px-3 rounded-md flex items-center justify-center shrink-0 bg-darkBlue text-[13px]"
               >
                 {items}
               </div>

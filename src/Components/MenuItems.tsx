@@ -22,7 +22,7 @@ const MenuItems = ({
   return (
     <NavLink to={route} key={index}>
       <m.div
-        className={`flex items-center gap-2  px-3 py-3 rounded-md hover:bg-mediumBlue`}
+        className={`flex items-center md:gap-2  px-3 py-3 rounded-md hover:bg-mediumBlue flex-col md:flex-row`}
         animate={{
           justifyContent: isfullMenu ? "start" : "center",
         }}
@@ -49,13 +49,20 @@ const MenuItems = ({
             {" "}
             <p
               className={
-                "whitespace-nowrap text-[15px] md:text-[13px] text-gray-400"
+                "whitespace-nowrap text-[15px] md:text-[13px] text-gray-400 hidden md:block"
               }
             >
               {title}
             </p>
           </m.div>
         )}
+        <p
+          className={
+            "whitespace-nowrap text-[12px] md:text-[13px] text-gray-400 block md:hidden"
+          }
+        >
+          {title}
+        </p>
       </m.div>{" "}
     </NavLink>
   );
