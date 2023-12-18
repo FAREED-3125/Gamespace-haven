@@ -4,6 +4,7 @@ import Example from "./Loading";
 import { AnimatePresence, motion as m } from "framer-motion";
 import { FaHeart } from "react-icons/fa";
 import StoreDetails from "./Details Components/StoreDetails";
+import { NavLink } from "react-router-dom";
 const Platforms = () => {
   const {
     data: gameData,
@@ -39,7 +40,7 @@ const Platforms = () => {
             },
           }}
         >
-          <div className="px-2 mt-5 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-3 gap-y-6  ">
+          <div className="px-2 mt-5 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-3 gap-y-6  ">
             {gameData?.results?.map((items: any, index: number) => (
               <m.div
                 initial={{
@@ -85,7 +86,12 @@ const Platforms = () => {
                           className="flex items-center justify-between mb-1 text-[12px] text-gray-300 w-full"
                           key={index}
                         >
-                          <p className="underline">{game?.name}</p>
+                          <NavLink
+                            to={`/gamedetails/${game?.id}`}
+                            className="underline hover:text-white"
+                          >
+                            {game?.name}
+                          </NavLink>
                           <p className="flex gap-[5px] items-center">
                             <FaHeart />
                             {game?.added}
