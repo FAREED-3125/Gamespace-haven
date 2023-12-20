@@ -69,8 +69,8 @@ const Platforms = () => {
                   alt=""
                 />
 
-                <div className="w-full absolute top-0 h-full bg-gradient-to-t from-black/90 to-transparent flex items-end  py-2 px-2 group cursor-pointer">
-                  <div className="px-3 w-full">
+                <div className="w-full absolute top-0 h-full bg-gradient-to-t from-black/90 to-transparent flex items-end  group cursor-pointer">
+                  <div className=" w-[95%] mx-auto">
                     {" "}
                     <h3
                       className="text-[22px] font-[800]  group-hover:scale-[1.1]
@@ -80,7 +80,7 @@ const Platforms = () => {
                       {items?.name}
                     </h3>
                     {items?.games
-                      .slice(0, 3)
+                      .slice(0, 2)
                       .map((game: any, index: number) => (
                         <div
                           className="flex items-center justify-between mb-1 text-[12px] text-gray-300 w-full"

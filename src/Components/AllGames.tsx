@@ -49,10 +49,10 @@ const AllGames = () => {
           key={key}
         >
           <SliderConponent result={gameData?.results} />
-          <h3 className="text-[22px] font-[600] mt-10 mb-4 px-2">
+          <h3 className="text-[22px] font-[600] mt-10 mb-4 px-2 ">
             Popular Games
           </h3>
-          <div className="px-2 mt-5 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-3 gap-y-6  ">
+          <div className="px-2 mt-5 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-3 gap-y-6">
             {gameData?.results?.map((items: any, index: number) => (
               <div
                 onClick={() =>
@@ -85,7 +85,7 @@ const AllGames = () => {
                     className="w-full object-cover aspect-video brightness-[.8] hover:brightness-[1] rounded-md transition-all duration-[.3s]"
                     alt=""
                   />
-                  <div className="flex items-center gap-2 px-2 pt-2">
+                  <div className="flex items-center gap-2 mx-2 mt-2">
                     {platforms.map((plat: any, index: number) => {
                       return (
                         <img
@@ -97,7 +97,7 @@ const AllGames = () => {
                       );
                     })}
                   </div>
-                  <div className="w-full flex items-start justify-between py-2 px-2">
+                  <div className="w-full flex items-start justify-between m-2">
                     <div className="flex flex-col gap-[10px] flex-grow">
                       <h3 className="text-[18px] font-[600]">{items?.name}</h3>
                       <div className="flex gap-2 flex-wrap">

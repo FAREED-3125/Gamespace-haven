@@ -45,9 +45,15 @@ const Sidebar = () => {
   return (
     <m.div className="w-max fixed z-[999] left-0 inset-y-0 md:static  rounded-lg bg-lightBlue flex  h-full overflow-auto">
       <m.div
-        className="w-[0px]  flex flex-col justify-between py-5 overflow-auto"
+        className="w-[0px] hidden md:flex flex-col justify-between py-5 overflow-auto"
         animate={{
-          width: isfullMenu ? "250px" : screenWidth <= 740 ? "0px" : "60px",
+          width: isfullMenu
+            ? screenWidth < 1024
+              ? "200px"
+              : "200px"
+            : screenWidth <= 740
+            ? "0px"
+            : "60px",
         }}
       >
         {/* Logo container starts here */}
@@ -69,7 +75,7 @@ const Sidebar = () => {
               }}
               className="text-[18px] font-[700] stretch-text whitespace-nowrap"
             >
-              <span className="">Game</span>Space Haven
+              <span className="">Game</span>Space
             </m.h1>
           )}
         </div>

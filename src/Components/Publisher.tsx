@@ -40,7 +40,7 @@ const Publisher = () => {
           }}
           className=" w-full h-full"
         >
-          <div className="px-2 mt-5 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-3 gap-y-6  ">
+          <div className="px-2 mt-5 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-3 gap-y-6  ">
             {gameData?.results?.map((items: any, index: number) => (
               <m.div
                 initial={{
@@ -68,8 +68,8 @@ const Publisher = () => {
                   alt=""
                 />
 
-                <div className="w-full absolute top-0 h-full bg-gradient-to-t from-black/90 to-transparent flex items-end  py-2 px-2 group cursor-pointer">
-                  <div className="px-3 w-full">
+                <div className="w-full absolute top-0 h-full bg-gradient-to-t from-black/90 to-transparent flex items-end  group cursor-pointer">
+                  <div className="mx-auto w-[95%]">
                     {" "}
                     <h3
                       className="text-[22px] font-[800]  group-hover:scale-[1.1]
@@ -79,7 +79,7 @@ const Publisher = () => {
                       {items?.name}
                     </h3>
                     {items?.games
-                      .slice(0, 3)
+                      .slice(0, 2)
                       .map((game: any, index: number) => (
                         <div
                           className="flex items-center justify-between mb-1 text-[12px] text-gray-300 w-full"

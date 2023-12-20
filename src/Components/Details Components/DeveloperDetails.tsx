@@ -43,7 +43,7 @@ const DeveloperDetails = ({ details, setOpenDetails }: DevDetailsProps) => {
       }}
       className="bg-black/60 backdrop:blur-[2px] w-full h-full absolute top-0 left-0 z-[9999999] flex items-end lg:items-center justify-center"
     >
-      <div className="w-full lg:w-[80%]   h-[80%] lg:h-[80%] rounded-md flex items-center flex-col gap-2">
+      <div className="w-full lg:w-[80%] h-[80%] lg:h-[80%] rounded-md flex items-center flex-col gap-2">
         <div
           className="p-2 bg-white text-black text-[24px] rounded-full cursor-pointer"
           onClick={() => setOpenDetails(false)}
