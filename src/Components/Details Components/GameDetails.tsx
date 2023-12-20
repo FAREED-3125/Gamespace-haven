@@ -71,10 +71,10 @@ const GameDetails = () => {
                     />
 
                     <div className="w-full absolute top-0 h-full bg-gradient-to-t from-black/90 to-transparent flex items-end  py-2 px-2 group cursor-pointer">
-                      <div className="px-3 w-full">
+                      <div className="w-[95%] mx-auto">
                         {" "}
                         <h3
-                          className="text-[18px] font-[800]  group-hover:scale-[1.1]
+                          className="text-[13px] font-[800]  group-hover:scale-[1.1]
                   group-hover:translate-y-[-10px] transition-all duration-[.2s] origin-left
                   "
                         >
@@ -101,10 +101,10 @@ const GameDetails = () => {
                     />
 
                     <div className="w-full absolute top-0 h-full bg-gradient-to-t from-black/90 to-transparent flex items-end  py-2 px-2 group cursor-pointer">
-                      <div className="px-3 w-full">
+                      <div className="w-[95%] mx-auto">
                         {" "}
                         <h3
-                          className="text-[18px] font-[800]  group-hover:scale-[1.1]
+                          className="text-[13px] font-[800]  group-hover:scale-[1.1]
                   group-hover:translate-y-[-10px] transition-all duration-[.2s] origin-left
                   "
                         >
@@ -153,10 +153,10 @@ const GameDetails = () => {
                     />
 
                     <div className="w-full absolute top-0 h-full bg-gradient-to-t from-black/90 to-transparent flex items-end  py-2 px-2 group cursor-pointer">
-                      <div className="px-3 w-full">
+                      <div className="w-[95%] mx-auto">
                         {" "}
                         <h3
-                          className="text-[18px] font-[800]  group-hover:scale-[1.1]
+                          className="text-[13px] font-[800]  group-hover:scale-[1.1]
                   group-hover:translate-y-[-10px] transition-all duration-[.2s] origin-left
                   "
                         >
@@ -183,10 +183,10 @@ const GameDetails = () => {
                     />
 
                     <div className="w-full absolute top-0 h-full bg-gradient-to-t from-black/90 to-transparent flex items-end  py-2 px-2 group cursor-pointer">
-                      <div className="px-3 w-full">
+                      <div className="w-[95%] mx-auto">
                         {" "}
                         <h3
-                          className="text-[18px] font-[800]  group-hover:scale-[1.1]
+                          className="text-[13px] font-[800]  group-hover:scale-[1.1]
                   group-hover:translate-y-[-10px] transition-all duration-[.2s] origin-left
                   "
                         >
